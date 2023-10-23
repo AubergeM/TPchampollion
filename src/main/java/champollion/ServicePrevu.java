@@ -1,7 +1,6 @@
 package champollion;
 
 public class ServicePrevu {
-	// TODO : implémenter cette classe
     private int vCM, vTD, vTP;
     private UE ue;
     private Enseignant enseignant;

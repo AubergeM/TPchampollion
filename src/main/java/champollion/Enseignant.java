@@ -4,8 +4,6 @@ import java.util.Date;
 import java.util.LinkedList;
 public class Enseignant extends Personne {
 
-    // TODO : rajouter les autres méthodes présentes dans le diagramme UML
-
     ArrayList<ServicePrevu> serviceprevu = new ArrayList<>();
     LinkedList<Intervention> interventions = new LinkedList<>();
     public Enseignant(String nom, String email) {
@@ -21,7 +19,6 @@ public class Enseignant extends Personne {
      *
      */
     public int heuresPrevues() {
-        // TODO: Implémenter cette méthode
         int hEquiTD = 0;
         for (ServicePrevu servicep : serviceprevu){
             hEquiTD += 1.5 * servicep.getVolumeCM();
@@ -41,7 +38,6 @@ public class Enseignant extends Personne {
      *
      */
     public int heuresPrevuesPourUE(UE ue) {
-        // TODO: Implémenter cette méthode
         int equiTdUe = 0;
 
         for (ServicePrevu servicep : serviceprevu){
@@ -63,13 +59,11 @@ public class Enseignant extends Personne {
      * @param vTP le volume d'heures de TP
      */
     public void ajouteEnseignement(UE ue, int vCM, int vTD, int vTP) {
-        // TODO: Implémenter cette méthode
         ServicePrevu sp = new ServicePrevu( vCM, vTD,vTP, ue, this);
         serviceprevu.add(sp);
     }
 
     public void ajouteIntervention(Intervention i) {
-        // TODO: Implémenter cette méthode
         interventions.add(i);
     }
 
